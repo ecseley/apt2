@@ -34,10 +34,12 @@
 
 @import 'partials/_header.scss';
 @import 'partials/_nav.scss';
+@import 'partials/_about.scss';
 @import 'partials/_sidebar.scss';
 @import 'partials/_main.scss';
 @import 'partials/_footer.scss';
 @import 'partials/_navigation.scss';
+// @import 'partials/_folding-panels.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
@@ -50,6 +52,7 @@
 @import 'modules/_misc.scss';
 @import 'modules/_app.scss';
 
+
 // Enhancement modules
 @import 'modules/_breakpoints.scss';
 @import 'modules/_print.scss';
@@ -58,5 +61,7 @@
 // VENDOR
 //----------------------------------*/
 
+@import 'partials/_style3d.scss';
 @import 'vendor/_external.scss';
 @import 'vendor/_animate.scss';
+

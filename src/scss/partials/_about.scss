@@ -1,0 +1,11 @@
+.about {
+    @include outer-container;
+    height: 400px;
+    background: #fff;
+    max-width: 100%;
+
+
+    .about-text {
+        @include span-columns(12);
+    }
+}
