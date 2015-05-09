@@ -510,7 +510,7 @@ folding panel
         margin: 1em 0;
         font-family: $secondary-font;
         font-size: 1.8rem;
-        color: lighten($color-1, 30%);
+        color: $apt-blue;
 
         @include transition(transform $fold-content-animation/2 $fold-content-animation/4, opacity $fold-content-animation/2 $fold-content-animation/4);
     }
