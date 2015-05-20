@@ -69,6 +69,64 @@ $color-7: rgba(70, 130, 180, 1); // Steel Blue
 
 $apt-blue: rgba(3, 78, 162, 1); // Colbalt
 
+
+$socialColours:
+(
+        facebook: #3b5998,
+        twitter: #00aced,
+        google: #dd4b39,
+        linkedin: #007bb6,
+        youtube: #bb0000,
+        instagram: #517fa4,
+        pinterest: #cb2027,
+        flickr: #ff0084,
+        tumblr: #32506d,
+        forusquare: #0072b1,
+        dribbble: #ea4c89,
+        vine: #00bf8f
+);
+
+@function get-social-media-colour($colour) {
+
+  @if map-has-key($socialColours, $colour) {
+    $colour: map-get($socialColours, $colour);
+  } @else {
+    @if type-of($colour) != colour {
+      @error "Invalid colour name: `#{$colour}`.";
+    }
+  }
+
+  @return $colour;
+};
+
+.fa
+{
+  &.fa-twitter-square
+  {
+    color: get-social-media-colour(twitter);
+  }
+
+  &.fa-google-plus-square
+  {
+    color: get-social-media-colour(google);
+  }
+
+  &.fa-facebook-official
+  {
+    color: get-social-media-colour(facebook);
+  }
+
+  &.fa-linkedin-square
+  {
+    color: get-social-media-colour(linkedin);
+  }
+
+  &.fa-youtube-square
+  {
+    color: get-social-media-colour(youtube);
+  }
+};
+
 // fonts 
 
 $primary-font: 'Open Sans', sans-serif;

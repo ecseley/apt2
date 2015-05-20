@@ -1,3 +1,25 @@
+.line-behind-text {
+    border-bottom: 1px solid #cacaca;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 2.5em;
+
+
+    h6 {
+        background: #fff;
+        color: #808080;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 500;
+        padding: 0 10px;
+        position: relative;
+        text-transform: uppercase;
+        top: 34px;
+        margin-bottom: 1.3em;
+    }
+}
+
+
 .main {
   @include outer-container;
 
