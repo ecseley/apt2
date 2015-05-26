@@ -203,7 +203,7 @@ Main content
     }
     
     @include MQ(L) {
-        @include column(.5);
+        @include column(.25);
         height: 520px;
         @include transition(transform $fold-animation $fold-content-animation);
 
