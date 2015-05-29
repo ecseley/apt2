@@ -64,6 +64,7 @@
         transparentize($image-gradient-color-bottom, $transparency-bottom));
       display: block;
       @include position(absolute, 0px 0px 0px 0px);
+      height: 400px;
 
       &:after {
         @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 

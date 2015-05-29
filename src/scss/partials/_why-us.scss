@@ -1,8 +1,9 @@
 .why-us-section {
   @include outer-container();
   max-width: 100%;
-  background: #fff;
+  background: $color-7;
   padding: 1.5em;
+  color: lightgray;
 
   .bullets {
     
@@ -10,7 +11,7 @@
     $action-color: #477DCA !default;
     $base-link-color: $action-color !default;
     $dark-gray: #333 !default;
-    $base-font-color: $dark-gray !default;
+    $base-font-color: $color-6 !default;
     $icon-bullet-size: 3.5em;
 
     @include display(flex);
@@ -64,7 +65,7 @@
     }
 
     p {
-      color: $base-font-color;
+      color: white;
       line-height: $base-line-height;
     }
 

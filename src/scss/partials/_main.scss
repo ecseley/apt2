@@ -1,31 +1,32 @@
-.line-behind-text {
-    border-bottom: 1px solid #cacaca;
-    text-align: center;
-    width: 80%;
+.section-header {
+    // border-bottom: 1px solid #cacaca;
+    // text-align: center;
+    // width: 80%;
     margin: 0 auto 2.5em;
 
 
     h2 {
-        background: #fff;
-        color: #808080;
-        display: inline-block;
-        font-size: 1em;
-        font-weight: 500;
-        padding: 0 10px;
+        width: 70%;
+        background: $color-7;
+        color: #fff;
+        display: block;
+        font-size: 2em;
+        font-weight: 300;
+        margin: -30px auto 40px;
+        padding: .5em 1em;
         position: relative;
-        text-transform: uppercase;
-        top: 34px;
-        margin-bottom: 1.3em;
+        box-shadow: 0 .1em white;
+        border-radius: 10px;
+        text-align: center;
     }
 }
-
-
 .main {
-  @include outer-container;
+  // @include outer-container;
+  transform: translateY(2em);
+  padding-bottom: 70px;
 
   .row {
     @include span-columns(12);
-    // @include shift(1);
 
     h2.brush-machines--section2-intro {
 

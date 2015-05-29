@@ -70,6 +70,7 @@
 				var mq = viewportSize();
 				$('.cd-folding-panel').removeClass('is-open');
 				$('.cd-main').removeClass('fold-is-open');
+				$('body').removeClass('overflow-hidden');
 
 				(mq === 'mobile' || $('.no-csstransitions').length > 0 )
 					/* according to the mq, immediately remove the .overflow-hidden of wait for the end of the animation */
@@ -86,6 +87,8 @@
 			/* retrieve the content value of .cd-main::before to check the actual mq */
 			return window.getComputedStyle(document.querySelector('.cd-main'), '::before').getPropertyValue('content');
 		}
+
+		$('.tagline').fitText(3.5);
   });
 
 })(jQuery, window, document);
