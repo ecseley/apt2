@@ -1,45 +1,30 @@
 .about {
-
-  :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
+    position: relative;
+    padding: 20px 0 100px;
     @include background(url("../img/machine-line-drawing.png"), linear-gradient(lightgray, darkgray), center no-repeat black fixed);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
     box-shadow: inset 0 0 .5em #666;
-  }
 
-
-    height: 400px;
     .image-gradient-dynamic {
-    $image-gradient-color-top: black; 
-    $transparency-top: 0.9;
-    $image-gradient-color-bottom: gray; 
-    $transparency-bottom: 0.6;
-    $vertical-angle: 0deg;
-    $image-gradient-color-left: lightgray; 
-    $transparency-left: 0.8;
-    $image-gradient-color-right: black; 
-    $transparency-right: 0.8;
-    $horizontal-angle: 90deg;
-    
-    line-height: 0;
-    position: relative;
-    width: 100%;
+      $image-gradient-color-top: black; 
+      $transparency-top: 0.9;
+      $image-gradient-color-bottom: gray; 
+      $transparency-bottom: 0.6;
+      $vertical-angle: 0deg;
+      $image-gradient-color-left: lightgray; 
+      $transparency-left: 0.8;
+      $image-gradient-color-right: black; 
+      $transparency-right: 0.8;
+      $horizontal-angle: 90deg;
+      
+      line-height: 0;
+      position: relative;
+      width: 100%;
 
 
-    img {
-     height: auto;
-     left: 0; 
-     position: relative;
-     top: 0;
-     width: 100%;
-    }
+
 
     .copy {
       @include transform(translate(-50%, -50%));
@@ -58,22 +43,184 @@
         position: relative;
       }
     }
+  }
+}
 
-    .overlay {
-      @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-        transparentize($image-gradient-color-bottom, $transparency-bottom));
-      display: block;
-      @include position(absolute, 0px 0px 0px 0px);
-      height: 400px;
+.about-machines {
+  @include outer-container;
+  max-width: 60em;
+  background: rgba(255,255,255,.85);
+  transform: translateY(20px);
+  padding: 20px 0;
+  border-radius: 5px;
 
-      &:after {
-        @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-          transparentize($image-gradient-color-right, $transparency-right));
-        @include position(absolute, 0px 0px 0px 0px);
-        content: '';
-        display: block;
-      }
+  @include MQ(L) {
+    max-width: 80em;
+  }
+
+
+  p.design-build {
+    @include span-columns(10);
+    @include shift(1);
+
+    &::first-letter {
+      font-family: $helvetica;
+      font-weight: bold;
+      color: $color-7;
+      font-size: 2em;
+    }
+
+    // &::first-line {
+    //   font-size: 1.1em;
+    // }
+
+    br {
+      margin-bottom: 1em;
     }
   }
 
+  h4 {
+    @include span-columns(10);
+    @include shift(1);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1em;
+    color: $color-7;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    text-transform: uppercase;
+  }
+
+  .issues {
+    @include span-columns(10);
+    @include shift(1);
+    position: relative;
+
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 0 10px 70px;
+    // margin-left: 40px;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      font-size: 12em;
+      right: -80px;
+      top: -30px;
+      opacity: .7;
+      
+      .fa-wrench {
+        color: rgba(104,104,104, .2);
+      }
+
+      .fa-ban {
+        color: rgba(184,0,0, .1);
+      }
+    }
+
+    @include MQ(L) {
+      @include span-columns(5);
+      @include shift(1);
+    }
+  }
+
+  .solutions {
+    @include span-columns(10);
+    @include shift(1);
+
+    position: relative;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 0 10px 70px;
+    // margin-left: 40px;
+    overflow: hidden;
+
+    i {
+      position: absolute;
+      top: -15px;
+      right: -30px;
+      font-size: 17em;
+      color: rgba(71,170,28, .2);
+    }
+
+    @include MQ(L) {
+      @include span-columns(5);
+      @include omega();
+      margin-left: 0;
+    }
+  }
+
+  h5 {
+    // @include span-columns(5);
+    // @include shift(1);
+    // @include span-columns(5 of 5);
+    // padding-left: 40px;
+    font-size: 1.3em;
+    transform: translateX(-35px);
+    border-bottom: 1px solid #999;
+  }
+  
+  ol {
+    // @include span-columns(5 of 5);
+    // @include span-columns(5);
+    // @include shift(1);
+
+
+    list-style-type: none;
+    list-style-type: decimal;
+
+    // margin: 10px 0 0 4em;
+    margin-top: 10px;
+    padding: 0;
+
+    counter-reset: li-counter;
+
+    > li {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: .5em;
+      min-height: 1em;
+      font-size: 1em;
+      font-weight: bold;
+
+      &:before {
+        position: absolute;
+        top: -.5rem;
+        left: -4rem;
+        width: 3rem;
+        height: 3rem;
+
+        font-size: 2.2rem;
+        line-height: 1.4;
+        text-align: center;
+        color: #f5f5f5;
+
+        border: 3px solid #ccc;
+        border-radius: 50%;
+        background-color: $color-7;
+        content: counter(li-counter);
+        counter-increment: li-counter;
+        box-sizing: content-box;
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

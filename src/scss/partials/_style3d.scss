@@ -185,8 +185,8 @@ Main content
     p {
         line-height: 1.2;
         font-size: 1.4rem;
-        opacity: 0.6;
-        padding: 1em 0;
+        // opacity: 0.6;
+        padding: 0;
     }
 
     b {
@@ -213,6 +213,7 @@ Main content
 
         p {
             font-size: 1.6rem;
+            margin-bottom: .5em;
         }
 
         h2, p, span {
@@ -222,6 +223,7 @@ Main content
 
         b {
             opacity: 0;
+            margin-top: 2.5em;
             @include transform(translateY(20px));
             @include transition(opacity 0.3s 0s, transform 0.3s 0s);
 
