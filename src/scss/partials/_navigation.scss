@@ -212,7 +212,8 @@
 
     &.large {
       a {
-        width: 18em;
+        width: 21em;
+        whitespace: nowrap;
       }
 
       li > ul {
