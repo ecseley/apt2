@@ -58,6 +58,10 @@
     max-width: 80em;
   }
 
+  @include retina {
+    max-width: 75em;
+  }
+
 
   p.design-build {
     @include span-columns(10);
@@ -136,6 +140,8 @@
     padding: 10px 0 10px 70px;
     // margin-left: 40px;
     overflow: hidden;
+    border: 4px solid $color-7;
+    box-shadow: 0 0 15px 2px rgba(0,105,172,1);
 
     i {
       position: absolute;
@@ -143,6 +149,10 @@
       right: -30px;
       font-size: 17em;
       color: rgba(71,170,28, .2);
+    }
+
+    h5 {
+      color: $color-7;
     }
 
     @include MQ(L) {
